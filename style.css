@@ -1,9 +1,3 @@
-body {
-background-image: url("milky-way-1845068_1920.jpg");
-color: white; 
-text-align: center;
-font-size: large;
-}
 
 #button {
 display:inline-block;
@@ -17,5 +11,37 @@ font-family:'Roboto',sans-serif;
 font-weight:300;
 color: rgb(46, 46, 46);
 text-align:center;
+font-size: 15px;
+}
+
+#input {
+display:inline-block;
+padding:0.35em 1.2em;
+border:0.1em solid #FFFFFF;
+margin:0 0.3em 0.3em 0;
+border-radius:0.12em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color: rgb(31, 31, 31);
+text-align:center;
+font-size: 15px;
+}
+
+h1{
+color: white; 
+font-family: fantasy;
+font-size: 30px;
+text-align: center;
+}
+
+/* .main-section {
+
+} */
+
+body {
+background-image: url("milky-way-1845068_1920.jpg");
+text-align: center;
 }
 

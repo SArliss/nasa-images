@@ -1,10 +1,11 @@
 # NASA IMAGES 
 
 ## General info
-This webpage access the NASA database and shows high quality images and videos accordingly to users input search. 
+This webpage access the NASA database and shows high quality images accordingly to user's input. 
 	
 ## API
-This website uses the images.nasa.gov API. JSON is returned by all API responses, including errors. 
+This website uses the images.nasa.gov API. 
+JSON is returned by all API responses, including errors. 
 
 ###### Request:
 ```
