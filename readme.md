@@ -15,6 +15,10 @@ At least one parameter is required, but all individual parameters are optional.
 
 Search results will come in the form of Collection+JSON, which contains results and information about how to retrieve more  details about each result. In the example above it will return a colection of objects with title "moon" and and media_type "image". 
 
+## Wireframe
+
+![Mockup](/mockup-nasa-images.png)
+
 ## Features
 1 - User types a string in the input field 
 
