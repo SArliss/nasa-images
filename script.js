@@ -1,51 +1,73 @@
 window.onload = function () {
 
 
-
   // Setting all my global variables
   const button = document.querySelector("button");
-  // Selecting the whole <input id="mainInput" type="text" placeholder="Type here"> 
   const search = document.querySelector("input");
+  const mainSection = document.querySelector("#mainSection");
+  const descriptionSection = document.querySelector("#descriptionSection")
 
 
-
-  // NASA API Request 
+  // Event handler click to button and NASA API Request 
   button.addEventListener("click", async function (evt) {
     evt.preventDefault()
-
     const searchPicked = search.value;
     console.log(searchPicked);
-
     // Getting all the images avaiable in the database according to the searchPicked word 
     const results = await axios.get(`https://images-api.nasa.gov/search?q=${searchPicked}&media_type=image`);
-    console.log(results);
-
     // Calling the renderResults function and passing the searchPicked results as a parameter. Two functions: Better usability 
     renderResults(results)
-
   })
 
-
+  // Populating the website 
   function renderResults(results) {
-    // Items index value will loop from i = 0 to items.length. Links and data index values are fixed to 0. 
-    // Or until items.lenght lesser than 20 
-    const imgUrl = results.data.collection.items[1].links[0].href;
-    const title = results.data.collection.items[1].data[0].title;
-    const nasaID = results.data.collection.items[1].data[0].nasa_id;
-    const year = results.data.collection.items[1].data[0].date_created;
-    const description = results.data.collection.items[1].data[0].description;
+    // Cleaning the main section and description section data
+    mainSection.innerHTML = "";
+    descriptionSection.innerHTML = "";
+    // Collecting array of objects from nasa database 
+    results = results.data.collection.items;
 
-    console.log(imgUrl);
-    console.log(title);
-    console.log(nasaID);
-    console.log(year);
-    console.log(description);
+    // Creating a new div element ro receive all the data in the DOM
+    const divContainer = document.createElement('div');
+    divContainer.className = "container";
 
-  }
+    for (let i = 0; i < results.length && i <= 20; i++) {
+
+      const imgUrl = results[i].links[0].href;
+      const title = results[i].data[0].title;
+      const nasaID = results[i].data[0].nasa_id;
+      const year = results[i].data[0].date_created;
+      const description = results[i].data[0].description;
+
+      // Appending images 
+      const posterImg = document.createElement('img');
+      posterImg.className = 'poster';
+      posterImg.src = imgUrl;
+      posterImg.setAttribute('ID', nasaID);
+      divContainer.append(posterImg);
+
+      // Appending title and year 
+      const titleHeader = document.createElement('h5')
+      titleHeader.className = 'title-header';
+      titleHeader.innerHTML = `${title}, ${year}`;
+      divContainer.append(titleHeader);
+
+      // Appending description 
+
+      // Appending the div container to the main section of the page 
+      mainSection.appendChild(divContainer);
+
+
+    }
+
+
+
+  } // Closing renderResults Function 
 
 
 
 
 
 
-}
+} // Closing windows.onload function 
+

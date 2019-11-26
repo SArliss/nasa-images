@@ -36,12 +36,30 @@ font-size: 30px;
 text-align: center;
 }
 
-/* .main-section {
-
-} */
+img {
+  height: 200px;
+  width: 200px; 
+}
 
 body {
 background-image: url("milky-way-1845068_1920.jpg");
 text-align: center;
 }
+
+#mainButton, .poster{
+  cursor: pointer; 
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: left;
+  background-color: rgba(46, 49, 49, .5);
+  padding: 10px;
+  margin: 10px;
+  font-family:'Roboto',sans-serif;
+  color: rgb(137, 144, 150);
+}
+
 
