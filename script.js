@@ -4,9 +4,7 @@ window.onload = function () {
   // Setting all my global variables
   const button = document.querySelector("button");
   const search = document.querySelector("input");
-  const mainSection = document.querySelector("#mainSection");
-  const descriptionSection = document.querySelector("#descriptionSection")
-
+  const mainSection = document.querySelector("#imgResults");
 
   // Event handler click to button and NASA API Request 
   button.addEventListener("click", async function (evt) {
@@ -23,7 +21,6 @@ window.onload = function () {
   function renderResults(results) {
     // Cleaning the main section and description section data
     mainSection.innerHTML = "";
-    descriptionSection.innerHTML = "";
     // Collecting array of objects from nasa database 
     results = results.data.collection.items;
 
@@ -36,8 +33,8 @@ window.onload = function () {
       const imgUrl = results[i].links[0].href;
       const title = results[i].data[0].title;
       const nasaID = results[i].data[0].nasa_id;
-      const year = results[i].data[0].date_created;
-      const description = results[i].data[0].description;
+      let year = results[i].data[0].date_created;
+      // const description = results[i].data[0].description;
 
       // Appending images 
       const posterImg = document.createElement('img');
@@ -47,12 +44,11 @@ window.onload = function () {
       divContainer.append(posterImg);
 
       // Appending title and year 
-      const titleHeader = document.createElement('h5')
+      year = year.slice(0, 10);
+      const titleHeader = document.createElement('h5');
       titleHeader.className = 'title-header';
       titleHeader.innerHTML = `${title}, ${year}`;
       divContainer.append(titleHeader);
-
-      // Appending description 
 
       // Appending the div container to the main section of the page 
       mainSection.appendChild(divContainer);

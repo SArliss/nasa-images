@@ -1,6 +1,12 @@
+.searchSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
 
 #mainButton {
-display:inline-block;
 padding:0.35em 1.2em;
 border:0.1em solid rgba(140, 140, 140, .5);
 margin:0 0.3em 0.3em 0;
@@ -16,7 +22,6 @@ font-size: 15px;
 }
 
 #mainInput {
-display:inline-block;
 padding:0.35em 1.2em;
 border:0.1em solid #FFFFFF;
 margin:0 0.3em 0.3em 0;
@@ -41,39 +46,50 @@ font-family: 'lato',sans-serif;
 font-weight: 300;
 font-size: 50px;
 letter-spacing: 10px;
-
 background: -webkit-linear-gradient(white, #38495a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-
-
-}
-
-
-
-img {
-  height: 200px;
-  width: 200px; 
 }
 
 body {
 background-image: url("milky-way-1845068_1920.jpg");
-text-align: center;
 }
+
+
 
 #mainButton, .poster{
   cursor: pointer; 
 }
 
-.container {
-  display: block;
-  justify-content: center;
-  align-items: left;
-  background-color: rgba(46, 49, 49, .5);
-  padding: 10px;
+#imgResults{
+  display: flex;
+  width: 600px;;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.container{
   margin: 10px;
-  font-family:'Roboto',sans-serif;
+  background-color: rgba(46, 49, 49, .5);
+  padding: 5px;
+  font-family:'lato',sans-serif;
   color: rgb(137, 144, 150);
 }
+
+.poster{
+  margin: 5px;
+  height: 200px;
+  width: 200px; 
+}
+
+.title-header{
+  overflow: hidden;
+  max-width: 200px;
+  height: 62px;
+  align-content: center;
+  vertical-align: text-top;
+}
+
 
 
