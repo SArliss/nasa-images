@@ -40,7 +40,8 @@ window.onload = function () {
       // If the search imput word does not appear in databate array size returns 0 
       // Shows alert and set the mainSection back to the image of the day 
       alert("Image not found. Sorry, search for something else.");
-      mainSection.innerHTML = featuredImgUrl;
+      imageOfTheDay();
+
     } else {
 
       // Creating a new div element ro receive all the data in the DOM
