@@ -56,17 +56,9 @@ background-image: url("milky-way-1845068_1920.jpg");
 }
 
 
-#mainButton, .poster{
+#mainButton, .poster, h1{
   cursor: pointer; 
 }
-
-.mainImg{
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-}
-
 
 .container{
   display: flex;
@@ -74,10 +66,33 @@ background-image: url("milky-way-1845068_1920.jpg");
   flex-basis: auto;
   justify-content: space-evenly;
   margin: 10px;
-  background-color: rgba(46, 49, 49, .5);
   padding: 5px;
   font-family:'lato',sans-serif;
+  background-color: rgba(46, 49, 49, .5);
   color: rgb(137, 144, 150);
+}
+
+.mainImageContainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: content;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.mainImg{
+  display: flex;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.mainTitle{
+  font-family:'lato',sans-serif;
+  color: rgb(137, 144, 150);
+  background-color: rgba(46, 49, 49, .5);
+  margin: 0 auto;
+  padding: 0 100px; 
+  text-align: justify;
 }
 
 .poster{
@@ -93,6 +108,8 @@ background-image: url("milky-way-1845068_1920.jpg");
   align-content: center;
   vertical-align: text-top;
 }
+
+
 
 
 

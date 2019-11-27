@@ -5,19 +5,52 @@ window.onload = function () {
   const button = document.querySelector("button");
   const search = document.querySelector("input");
   const mainSection = document.querySelector("#results");
+  const nasaImages = document.querySelector("h1");
 
   // API request to load the Astronomy Picture of the Day
   // https://api.nasa.gov/
   async function imageOfTheDay() {
     const request = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=iyo7fdXSVeEViTSkRC2eixo1Ey3fYqCkXcgqaYM9`);
-    const featuredImgUrl = request.data.hdurl;
-    // Populating the mainSection
-    const mainImg = document.createElement('img');
-    mainImg.className = 'mainImg';
-    mainImg.src = featuredImgUrl;
-    mainSection.append(mainImg);
+    const imageOfTheDayUrl = request.data.hdurl;
+    const imageOfTheDayTitle = request.data.title;
+    const imageOfTheDayYear = request.data.date;
+    const imageOfTheDayDescription = request.data.explanation;
+
+    // Populating the mainSection with the img of the day, title, year and description 
+    const mainImageContainer = document.createElement("div");
+    mainImageContainer.className = "mainImageContainer";
+
+    const mainImg = document.createElement("img");
+    mainImg.className = "mainImg";
+    mainImg.src = imageOfTheDayUrl;
+    mainImageContainer.append(mainImg);
+
+    const mainTitle = document.createElement("p");
+    mainTitle.className = "mainTitle";
+    mainTitle.innerHTML =
+      `<h2>Astronomy Picture of the Day</h2> 
+        <p>${imageOfTheDayTitle}, ${imageOfTheDayYear}.</p> 
+        <p>${imageOfTheDayDescription}</p>`;
+
+    mainImageContainer.append(mainTitle);
+
+
+
+    // const mainDescription = document.createElement("p");
+    // mainDescription.className = "mainDescription";
+    // mainDescription.innerHTML = imageOfTheDayDescription;
+    // mainImageContainer.append(mainDescription);
+
+    mainSection.appendChild(mainImageContainer);
   }
   imageOfTheDay();
+
+  // Event handler click to tile H1 NASA Images 
+  nasaImages.addEventListener("click", async function (evt) {
+    evt.preventDefault()
+    mainSection.innerHTML = "";
+    imageOfTheDay();
+  })
 
   // Event handler click to button and NASA API Request 
   button.addEventListener("click", async function (evt) {
@@ -31,8 +64,7 @@ window.onload = function () {
 
   // Populating the website 
   function renderResults(results) {
-    // Cleaning the main section and description section data
-    mainSection.innerHTML = "";
+
     // Collecting array of objects from nasa database 
     results = results.data.collection.items;
 
@@ -40,9 +72,11 @@ window.onload = function () {
       // If the search imput word does not appear in databate array size returns 0 
       // Shows alert and set the mainSection back to the image of the day 
       alert("Image not found. Sorry, search for something else.");
-      imageOfTheDay();
 
     } else {
+
+      // Cleaning the main section and description section data
+      mainSection.innerHTML = "";
 
       // Creating a new div element ro receive all the data in the DOM
       const divContainer = document.createElement('div');
