@@ -25,21 +25,14 @@ window.onload = function () {
     mainImg.src = imageOfTheDayUrl;
     mainImageContainer.append(mainImg);
 
-    const mainTitle = document.createElement("p");
-    mainTitle.className = "mainTitle";
+    const mainTitle = document.createElement("div");
+    mainTitle.className = "mainTitleAndDescription";
     mainTitle.innerHTML =
       `<h2>Astronomy Picture of the Day</h2> 
-        <p>${imageOfTheDayTitle}, ${imageOfTheDayYear}.</p> 
+        <h3>${imageOfTheDayTitle}, ${imageOfTheDayYear}.</h3> 
         <p>${imageOfTheDayDescription}</p>`;
 
     mainImageContainer.append(mainTitle);
-
-
-
-    // const mainDescription = document.createElement("p");
-    // mainDescription.className = "mainDescription";
-    // mainDescription.innerHTML = imageOfTheDayDescription;
-    // mainImageContainer.append(mainDescription);
 
     mainSection.appendChild(mainImageContainer);
   }
@@ -71,7 +64,7 @@ window.onload = function () {
     if (results.length === 0) {
       // If the search imput word does not appear in databate array size returns 0 
       // Shows alert and set the mainSection back to the image of the day 
-      alert("Image not found. Sorry, search for something else.");
+      alert("Sorry, image not found.");
 
     } else {
 
@@ -90,21 +83,34 @@ window.onload = function () {
         let year = results[i].data[0].date_created;
         // const description = results[i].data[0].description;
 
-        // Appending images 
+        // Creating and appending images 
+        const divImage = document.createElement('div');
+        divImage.className = 'divImage';
+
         const posterImg = document.createElement('img');
         posterImg.className = 'poster';
         posterImg.src = imgUrl;
         posterImg.setAttribute('ID', nasaID);
-        divContainer.append(posterImg);
+        divImage.append(posterImg);
 
-        // Appending title and year 
+        // Creating and appending title and year 
+        const divSearchImgInfo = document.createElement('div');
+        divSearchImgInfo.className = 'divSearchImgInfo';
+
         year = year.slice(0, 10);
-        const titleHeader = document.createElement('h5');
-        titleHeader.className = 'title-header';
-        titleHeader.innerHTML = `${title}. ${year}.`;
-        divContainer.append(titleHeader);
+        const searchImgInfo = document.createElement('h5');
+        searchImgInfo.className = 'searchImgInfo';
+        searchImgInfo.innerHTML = `${title}. <br> ${year}.`;
+        divSearchImgInfo.append(searchImgInfo);
 
-        // Appending the div container to the main section of the page 
+        // Adding divSearchImgInfo and divImage to another div
+        const divImgAndTitle = document.createElement('div');
+        divImgAndTitle.className = 'divImgAndTitle';
+
+        // Appending all the divs to mainSection 
+        divImgAndTitle.append(divImage);
+        divImgAndTitle.append(divSearchImgInfo);
+        divContainer.append(divImgAndTitle);
         mainSection.appendChild(divContainer);
 
       } // Closing the if statement

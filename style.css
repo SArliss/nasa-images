@@ -1,3 +1,5 @@
+/* Search Section  */
+
 .searchSection {
   display: flex;
   justify-content: center;
@@ -35,6 +37,8 @@ text-align:center;
 font-size: 15px;
 }
 
+/* NASA Image Gallerie Title  */
+
 h1{
 position: relative; 
 top: 50%; 
@@ -51,26 +55,17 @@ background: -webkit-linear-gradient(white, #38495a);
             -webkit-text-fill-color: transparent;
 }
 
+/* Body and selectors  */
+
 body {
 background-image: url("milky-way-1845068_1920.jpg");
 }
-
 
 #mainButton, .poster, h1{
   cursor: pointer; 
 }
 
-.container{
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: auto;
-  justify-content: space-evenly;
-  margin: 10px;
-  padding: 5px;
-  font-family:'lato',sans-serif;
-  background-color: rgba(46, 49, 49, .5);
-  color: rgb(137, 144, 150);
-}
+/* Image of the day section  */
 
 .mainImageContainer{
   display: flex;
@@ -83,33 +78,73 @@ background-image: url("milky-way-1845068_1920.jpg");
 .mainImg{
   display: flex;
   margin: 0 auto;
-  width: 60%;
+  max-width: 60%;
 }
 
-.mainTitle{
+.mainTitleAndDescription{
   font-family:'lato',sans-serif;
   color: rgb(137, 144, 150);
   background-color: rgba(46, 49, 49, .5);
   margin: 0 auto;
-  padding: 0 100px; 
-  text-align: justify;
+  padding: 0 100px 20px 100px; 
+  text-align: center;
 }
 
-.poster{
+/* Search results section  */
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: inherit;
+  margin: 0 auto;
+  padding: 30px;
+  font-family:'lato',sans-serif;
+  color: rgb(137, 144, 150);
+}
+
+.divImgAndTitle{
   margin: 5px;
-  height: 200px; 
+  max-height: 300px;
+  width: 225px; 
+  background-color: rgba(46, 49, 49, .8);
+}
+
+.divImage{
+  margin: 5px;
   width: 200px; 
 }
 
-.title-header{
-  overflow: hidden;
-  max-width: 100px;
-  height: 62px;
-  align-content: center;
-  vertical-align: text-top;
+.poster {
+  margin: 5px;
+  max-width: 200px; 
+  max-height: 220px;
 }
 
+.divSearchImgInfo{
+  overflow: hidden;
+  max-width: 200px;
+  vertical-align: text-top;
+  text-align: left;
+  margin: -20px 1px 1px 10px; 
+}
 
+p {
+  text-align: justify;
+}
+
+/* Navegation   */
+nav {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between; 
+  font-family:'lato',sans-serif;
+  color: rgb(137, 144, 150);
+}
+
+li {
+  text-decoration: none;
+}
 
 
 
