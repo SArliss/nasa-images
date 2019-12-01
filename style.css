@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -16,6 +16,7 @@ box-sizing: border-box;
 text-decoration:none;
 font-family: 'lato',sans-serif;
 font-weight:500;
+width: 200px;
 color: rgb(190, 190, 190);
 border:0.1em solid rgba(100, 100, 100, 0.3);
 background-color: rgba(100, 100, 100, .6);
@@ -31,6 +32,7 @@ box-sizing: border-box;
 text-decoration:none;
 font-family: 'lato',sans-serif;
 font-weight:500;
+width: 200px;
 color: rgb(16, 16, 16);
 border:0.1em solid rgba(255, 255, 255, .4);
 background-color: rgba(255, 255, 255, .8);
@@ -49,7 +51,7 @@ color: #FFF;
 text-align: center; 
 font-family: 'lato',sans-serif;
 font-weight: 300;
-font-size: 50px;
+font-size: 40px;
 letter-spacing: 10px;
 background: -webkit-linear-gradient(white, #38495a);
             -webkit-background-clip: text;
@@ -63,7 +65,7 @@ background-image: url("milky-way-1845068_1920.jpg");
 margin: 0;
 }
 
-#mainButton, .poster, h1{
+#mainButton, .poster{
   cursor: pointer; 
 }
 
@@ -73,15 +75,15 @@ margin: 0;
   display: flex;
   flex-wrap: wrap;
   flex-basis: content;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 0 auto;
-  padding: 30px;
+  width: 100vw;
 }
 
 .mainImageDiv{
   display: flex;
   margin: 0 auto;
-  width: 800px;
+  width: 700px;
 }
 
 .mainImg{
@@ -94,12 +96,22 @@ margin: 0;
 
 .mainTitleAndDescription{
   font-family:'lato',sans-serif;
-  color: rgb(137, 144, 150);
-  background-color: rgba(46, 49, 49, .5);
+  color: rgb(155, 155, 155);
+  background-color: rgba(20, 20, 20, 0.6);
+  line-height: 1.4em;
   margin: 0 auto;
-  padding: 0 100px 20px 100px; 
+  padding: 0 50px 20px 50px; 
   text-align: justify;
   width: 600px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 18px;
+  font-family: 'lato',sans-serif;
+  font-weight: 400;
+
 }
 
 /* Search results section  */
@@ -107,6 +119,7 @@ margin: 0;
 #results{
   justify-content: center;
   margin: 0 auto;
+  padding: 0;
 }
 
 .container{
@@ -115,7 +128,7 @@ margin: 0;
   align-content: center;
   justify-content: inherit;
   margin: 0 auto;
-  padding: 30px;
+  padding: 10px;
   font-family:'lato',sans-serif;
   color: rgb(137, 144, 150);
 }
@@ -184,7 +197,10 @@ li {
   align-items: center;
   align-content: space-evenly;
   margin: 0 2vw;
-  font-size: 2vh;
+  font-size: 18px;
+  background: -webkit-linear-gradient(rgb(196, 196, 196), #44596d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
 }
 
 /* Footer */
@@ -193,9 +209,12 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 10px 10px 40px 10px;
+  padding: 10px 20px 40px 20px;
   font-family:'lato',sans-serif;
   color: rgb(137, 144, 150);
+  background: -webkit-linear-gradient(white, #38495a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
 }
 
 a {
@@ -204,5 +223,43 @@ a {
   text-decoration: none;
 }
 
+/* Contact page */
 
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px 0 200px 0;
+  font-size: 18px;
+  font-family:'lato',sans-serif;
+  color: rgb(137, 144, 150);
+  background-color: rgba(46, 49, 49, .5);
+  width: 100vw;
+}
 
+/*change the layout of the navigation bar for all the screens 
+that have a width less or equal than 500px*/
+
+@media only screen and (max-width: 500px) {
+  /*shows elements in a column*/
+  ul{
+    flex-direction: column;
+  }
+  
+  /* deletes margin on top or bottom of the a tag*/
+  li{
+    margin: 0;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .searchSection{
+    flex-direction: column;
+  }
+  
+} 

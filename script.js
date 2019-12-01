@@ -31,10 +31,11 @@ window.onload = function () {
     const mainTitle = document.createElement("div");
     mainTitle.className = "mainTitleAndDescription";
     mainTitle.innerHTML =
-      `<h3>Astronomy Picture of the Day: ${imageOfTheDayTitle}, ${imageOfTheDayYear}.</h3> 
+      `<h3>Astronomy Picture of the Day</h3>
+        <p> ${imageOfTheDayTitle}, ${imageOfTheDayYear}.</p> 
         <p>${imageOfTheDayDescription}</p>`;
 
-    mainImageContainer.append(mainImageDiv); 
+    mainImageContainer.append(mainImageDiv);
     mainImageContainer.append(mainTitle);
 
     mainSection.appendChild(mainImageContainer);
