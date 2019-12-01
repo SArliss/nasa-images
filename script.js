@@ -84,12 +84,17 @@ window.onload = function () {
         // Creating and appending images 
         const divImage = document.createElement('div');
         divImage.className = 'divImage';
+        //divImage.innerHTML = `<a href="${imgUrl}" target="_blank">Test</a>`;
 
-        const posterImg = document.createElement('img');
+
+        const posterImg = document.createElement('div');
         posterImg.className = 'poster';
-        posterImg.src = imgUrl;
+        //posterImg.src = imgUrl;
+        posterImg.innerHTML = `<a href="${imgUrl}" target="_blank" ><img src="${imgUrl}"
+                              style="max-width:200px; max-height:220px; margin:0 auto;"></a>`;
         posterImg.setAttribute('ID', nasaID);
         divImage.append(posterImg);
+
 
         // Creating and appending title and year 
         const divSearchImgInfo = document.createElement('div');
@@ -117,7 +122,6 @@ window.onload = function () {
 
 
   } // Closing renderResults Function 
-
 
 } // Closing windows.onload function 
 
