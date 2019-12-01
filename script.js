@@ -20,30 +20,27 @@ window.onload = function () {
     const mainImageContainer = document.createElement("div");
     mainImageContainer.className = "mainImageContainer";
 
+    const mainImageDiv = document.createElement("div");
+    mainImageDiv.className = "mainImageDiv";
+
     const mainImg = document.createElement("img");
     mainImg.className = "mainImg";
     mainImg.src = imageOfTheDayUrl;
-    mainImageContainer.append(mainImg);
+    mainImageDiv.append(mainImg);
 
     const mainTitle = document.createElement("div");
     mainTitle.className = "mainTitleAndDescription";
     mainTitle.innerHTML =
-      `<h2>Astronomy Picture of the Day</h2> 
-        <h3>${imageOfTheDayTitle}, ${imageOfTheDayYear}.</h3> 
+      `<h3>Astronomy Picture of the Day: ${imageOfTheDayTitle}, ${imageOfTheDayYear}.</h3> 
         <p>${imageOfTheDayDescription}</p>`;
 
+    mainImageContainer.append(mainImageDiv); 
     mainImageContainer.append(mainTitle);
 
     mainSection.appendChild(mainImageContainer);
   }
   imageOfTheDay();
 
-  // Event handler click to tile H1 NASA Images 
-  nasaImages.addEventListener("click", async function (evt) {
-    evt.preventDefault()
-    mainSection.innerHTML = "";
-    imageOfTheDay();
-  })
 
   // Event handler click to button and NASA API Request 
   button.addEventListener("click", async function (evt) {

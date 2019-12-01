@@ -4,37 +4,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   margin: 0 auto;
 }
 
 #mainButton {
 padding:0.35em 1.2em;
-border:0.1em solid rgba(140, 140, 140, .5);
 margin:0 0.3em 0.3em 0;
 border-radius:0.12em;
 box-sizing: border-box;
 text-decoration:none;
-font-family:'Roboto',sans-serif;
-font-weight:300;
-color: rgb(255, 255, 255);
-background-color: rgba(140, 140, 140, .8);
+font-family: 'lato',sans-serif;
+font-weight:500;
+color: rgb(190, 190, 190);
+border:0.1em solid rgba(100, 100, 100, 0.3);
+background-color: rgba(100, 100, 100, .6);
 text-align:center;
-font-size: 15px;
+font-size: 16px;
 }
 
 #mainInput {
 padding:0.35em 1.2em;
-border:0.1em solid #FFFFFF;
 margin:0 0.3em 0.3em 0;
 border-radius:0.12em;
 box-sizing: border-box;
 text-decoration:none;
-font-family:'Roboto',sans-serif;
-font-weight:300;
-color: rgb(31, 31, 31);
+font-family: 'lato',sans-serif;
+font-weight:500;
+color: rgb(16, 16, 16);
+border:0.1em solid rgba(255, 255, 255, .4);
+background-color: rgba(255, 255, 255, .8);
 text-align:center;
-font-size: 15px;
+font-size: 16px;
 }
 
 /* NASA Image Gallerie Title  */
@@ -59,6 +60,7 @@ background: -webkit-linear-gradient(white, #38495a);
 
 body {
 background-image: url("milky-way-1845068_1920.jpg");
+margin: 0;
 }
 
 #mainButton, .poster, h1{
@@ -73,12 +75,21 @@ background-image: url("milky-way-1845068_1920.jpg");
   flex-basis: content;
   justify-content: space-evenly;
   margin: 0 auto;
+  padding: 30px;
+}
+
+.mainImageDiv{
+  display: flex;
+  margin: 0 auto;
+  width: 800px;
 }
 
 .mainImg{
   display: flex;
   margin: 0 auto;
-  max-width: 60%;
+  max-width: 100%;
+  align-content: center;
+  justify-content: inherit;
 }
 
 .mainTitleAndDescription{
@@ -87,10 +98,16 @@ background-image: url("milky-way-1845068_1920.jpg");
   background-color: rgba(46, 49, 49, .5);
   margin: 0 auto;
   padding: 0 100px 20px 100px; 
-  text-align: center;
+  text-align: justify;
+  width: 600px;
 }
 
 /* Search results section  */
+
+#results{
+  justify-content: center;
+  margin: 0 auto;
+}
 
 .container{
   display: flex;
@@ -129,20 +146,61 @@ background-image: url("milky-way-1845068_1920.jpg");
   margin: -20px 1px 1px 10px; 
 }
 
-p {
-  text-align: justify;
+
+/* Header and Nav Menu  */
+
+header{
+  background-color: rgba(140, 140, 140, .1);
+  align-content: center;
+  justify-content: center;
+  width: 100vw;
+  margin: 0 auto; 
+  padding: 0 0 30px 0; 
 }
 
-/* Navegation   */
-nav {
+nav{
+  background-color: rgba(46, 49, 49, .5);
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100vw;
+  padding: 10px 0 5px 0;
+  font-family:'lato',sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+ul {
   display: flex;
-  flex-direction: row;
-  align-content: space-between; 
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+li {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+  align-items: center;
+  align-content: space-evenly;
+  margin: 0 2vw;
+  font-size: 2vh;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 10px 40px 10px;
   font-family:'lato',sans-serif;
   color: rgb(137, 144, 150);
 }
 
-li {
+a {
+  font-family:'lato',sans-serif;
+  color: rgb(137, 144, 150);
   text-decoration: none;
 }
 

@@ -8,23 +8,35 @@
 </head>
 
 <body>
+  <header>
 
-  <form class="searchSection">
-    <input id="mainInput" type="text" placeholder="Type here">
-    <button id="mainButton" type="submit">Search for NASA Images</button>
-  </form>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">HOME</a>
+        </li>
+        <li>
+          <a href="https://www.nasa.gov/multimedia/nasatv/index.html#public" target="_blank">NASA TV</a>
+        </li>
+        <a href="https://api.nasa.gov/" target="_blank">APIs</a>
+        </li>
+        <li>
+          <a> CONTACT</a>
+        </li>
+      </ul>
+    </nav>
 
-  <h1>NASA Image Gallerie</h1>
+    <h1><a href="index.html"> NASA Image Gallery</a></h1>
 
-  <nav>
-    <ul>
-      <li>Nasa TV</li>
-      <li>Api</li>
-      <li>About me</li>
-    </ul>
-  </nav>
+    <form class="searchSection">
+      <input id="mainInput" type="text" placeholder="Type here">
+      <button id="mainButton" type="submit">Search for Images</button>
+    </form>
 
-  <section class="img-list">
+  </header>
+
+
+  <section class=" img-list">
     <div id="results">
 
     </div>
@@ -33,6 +45,10 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
 
+  <footer>
+    <p>Created by: Sinara Arliss, 2019. Contact information: <a href="mailto:sinaraarliss@gmail.com">
+        sinaraarliss@gmail.com</a></p>
+  </footer>
 
 </body>
 
