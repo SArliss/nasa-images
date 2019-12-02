@@ -10,10 +10,11 @@ window.onload = function () {
   // https://api.nasa.gov/
   async function imageOfTheDay() {
     const request = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=iyo7fdXSVeEViTSkRC2eixo1Ey3fYqCkXcgqaYM9`);
-    const imageOfTheDayUrl = request.data.hdurl;
+    let imageOfTheDayUrl = request.data.url;
     const imageOfTheDayTitle = request.data.title;
     const imageOfTheDayYear = request.data.date;
     const imageOfTheDayDescription = request.data.explanation;
+    console.log(imageOfTheDayUrl);
 
     // Populating the mainSection with the img of the day, title, year and description 
     const mainImageContainer = document.createElement("div");
@@ -24,6 +25,8 @@ window.onload = function () {
 
     const mainImg = document.createElement("img");
     mainImg.className = "mainImg";
+    // Temporary fix while I solve this issue with the DOM element to receive either video or image 
+    imageOfTheDayUrl = "https://www.nasa.gov/sites/default/files/thumbnails/image/xrt20191111t155410.png";
     mainImg.src = imageOfTheDayUrl;
     mainImageDiv.append(mainImg);
 
