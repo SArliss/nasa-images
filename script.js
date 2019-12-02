@@ -14,7 +14,7 @@ window.onload = function () {
     const imageOfTheDayTitle = request.data.title;
     const imageOfTheDayYear = request.data.date;
     const imageOfTheDayDescription = request.data.explanation;
-    console.log(imageOfTheDayUrl);
+    // console.log(imageOfTheDayUrl);
 
     // Populating the mainSection with the img of the day, title, year and description 
     const mainImageContainer = document.createElement("div");
