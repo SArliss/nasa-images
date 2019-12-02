@@ -1,6 +1,5 @@
 window.onload = function () {
 
-
   // Setting all my global variables
   const button = document.querySelector("button");
   const search = document.querySelector("input");
