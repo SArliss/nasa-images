@@ -237,6 +237,7 @@ body {
   background-color:rgba(33, 33, 33, 0.9);
   margin: 0;
   width: 100vw;
+  height: auto;
   position:relative;
   z-index:auto;
 }
@@ -346,6 +347,12 @@ that have a width less or equal than the breakpoint targeted */
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  .mainImageContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   h1 {
     font-size: 35px;
   }
