@@ -14,7 +14,7 @@ window.onload = function () {
     const imageOfTheDayTitle = request.data.title;
     const imageOfTheDayYear = request.data.date;
     const imageOfTheDayDescription = request.data.explanation;
-    // console.log(imageOfTheDayUrl);
+    const mediaType = request.data.media_type;
 
     // Populating the mainSection with the img of the day, title, year and description 
     const mainImageContainer = document.createElement("div");
@@ -23,13 +23,22 @@ window.onload = function () {
     const mainImageDiv = document.createElement("div");
     mainImageDiv.className = "mainImageDiv";
 
-    const mainImg = document.createElement("img");
-    mainImg.className = "mainImg";
-    // Temporary fix while I solve this issue with the DOM element to receive either video or image 
-    imageOfTheDayUrl = "https://www.nasa.gov/sites/default/files/thumbnails/image/xrt20191111t155410.png";
-    mainImg.src = imageOfTheDayUrl;
-    mainImageDiv.append(mainImg);
+    // Check if media is image or video 
+    if (mediaType === "image") {
+      const mainImg = document.createElement("img");
+      mainImg.setAttribute('src', imageOfTheDayUrl);
+      mainImg.className = "mainImg";
+      mainImageDiv.append(mainImg);
 
+      // if media type is not image then it's supossed to be video   
+    } else {
+      const mainImg = document.createElement("iframe");
+      mainImg.setAttribute('src', imageOfTheDayUrl);
+      mainImg.className = "mainImg";
+      mainImageDiv.append(mainImg);
+    }
+
+    // Creating text area 
     const mainTitle = document.createElement("div");
     mainTitle.className = "mainTitleAndDescription";
     mainTitle.innerHTML =
