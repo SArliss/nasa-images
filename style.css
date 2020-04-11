@@ -405,6 +405,10 @@ animation:move-clouds-back 200s linear infinite;
     min-width: 400px;
   }
 
+  .email-wrapper a {
+    font-size: 2.3em;
+  }
+
 }
 
 

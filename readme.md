@@ -1,8 +1,12 @@
 # NASA IMAGES 
 
 ## General info
-This webpage uses an API to access the NASA database and allows user to perform a search for images. 
-It also features a different astronomy and space science related image each day, along with a brief explanation written by a professional astronomer. 
+This webpage uses a third party API to access the NASA database and allows the user to perform a search for images. It also features a different astronomy science related image or video each day, along with a brief explanation written by a professional astronomer.
+
+Technologies:
+
+JavaScript
+HTML/CSS
 	
 ## API
 JSON is returned by all API responses, including errors. 
@@ -36,7 +40,7 @@ Search results will come in the form of Collection+JSON, which contains results 
 2 - User has the option to type a word (string) in the input field and search for images 
 
 2 - An event listener with an async function is activated when user presses enter or clicks on search button 
-  * It makes a request of data from NASA library 
+  * It requests data from NASA library 
   * Saves the data in a variable "results" 
   * Then it calls a render function passing results as its parameter 
 
