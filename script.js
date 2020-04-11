@@ -95,24 +95,20 @@ window.onload = function () {
         // Creating and appending images 
         const divImage = document.createElement('div');
         divImage.className = 'divImage';
-        //divImage.innerHTML = `<a href="${imgUrl}" target="_blank">Test</a>`;
-
 
         const posterImg = document.createElement('div');
         posterImg.className = 'poster';
-        //posterImg.src = imgUrl;
         posterImg.innerHTML = `<a href="${imgUrl}" target="_blank" ><img src="${imgUrl}"
                               style="max-width:200px; max-height:220px; margin:0 auto;"></a>`;
         posterImg.setAttribute('ID', nasaID);
         divImage.append(posterImg);
-
 
         // Creating and appending title and year 
         const divSearchImgInfo = document.createElement('div');
         divSearchImgInfo.className = 'divSearchImgInfo';
 
         year = year.slice(0, 10);
-        const searchImgInfo = document.createElement('h5');
+        const searchImgInfo = document.createElement('p');
         searchImgInfo.className = 'searchImgInfo';
         searchImgInfo.innerHTML = `${title}. <br> ${year}.`;
         divSearchImgInfo.append(searchImgInfo);
