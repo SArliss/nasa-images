@@ -145,7 +145,6 @@ h1 a:hover{
   font-family:'lato',sans-serif;
   color: rgb(155, 155, 155);
   background-color: rgba(20, 20, 20, 0.4);
-  line-height: 1.4em;
   margin: 0 auto;
   padding: 0 50px 20px 50px; 
   text-align: justify;
@@ -183,7 +182,7 @@ h3 {
 
 .divImgAndTitle{
   margin: 5px;
-  max-height: 300px;
+  min-height: 300px;
   width: 225px; 
   background-color: rgba(46, 49, 49, .5);
 }
@@ -247,7 +246,7 @@ a:hover {
   text-align: center;
   margin: 0 auto;
   padding: 1em;
-  font-size: 2em;
+  font-size: 1em;
   font-family:'lato',sans-serif;
   color: rgb(137, 144, 150);
 }
@@ -356,7 +355,7 @@ animation:move-clouds-back 200s linear infinite;
 }
 
 /* Mobile */
-@media only screen and (max-width: 900px) {
+@media (min-width: 481px) and (max-width: 767px) {
 
   .mainImageContainer{
     display: flex;
@@ -366,17 +365,30 @@ animation:move-clouds-back 200s linear infinite;
   .searchSection{
     flex-direction: column;
   }
+} 
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .mainImageContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   h1 {
-    padding-top: 10vw;
-    font-size: 7vw;
+    padding-top: 100px;
+    font-size: 65px;
   }
 
-  nav a{
-    font-size: 2.5em;
+  nav a {
+    font-size: 2em
   }
 
-} 
+  p {
+    font-size: 1.7em;
+  }
+
+}
 
 
 
