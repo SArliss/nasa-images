@@ -127,9 +127,10 @@ h1 a:hover{
 
 .mainImageContainer{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-content: stretch;
   margin: 0 auto;
-  width: 80%;
+  width: 80vw;
 }
 
 .mainImageDiv{
@@ -143,6 +144,7 @@ h1 a:hover{
 }
 
 .mainTitleAndDescription{
+  flex-grow: 1;
   font-family:'lato',sans-serif;
   color: rgb(155, 155, 155);
   background-color: rgba(20, 20, 20, 0.4);
@@ -150,7 +152,8 @@ h1 a:hover{
   padding: 0 50px 20px 50px; 
   text-align: justify;
   width: 500px;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 300;
 }
 
@@ -246,20 +249,21 @@ a:hover {
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  padding: 1em;
-  font-size: 1em;
+  padding: 0.9em 1em;
+  font-size: 18px;
+  font-weight: 300;
   font-family:'lato',sans-serif;
   color: rgb(137, 144, 150);
 }
 
 .email-wrapper {
-  margin: 50px auto;
+  margin: 90px auto 120px auto;
 }
 
 .email-wrapper a {
-  font-size: 1.3em;
+  font-size: 18px;
   padding: 1em;
-  border: 0.01em solid rgb(161, 46, 46);
+  border: 0.07em solid rgb(161, 46, 46);
   text-decoration: none;
   background: transparent;
   transition: 0.5s ease-in-out;
@@ -361,7 +365,9 @@ animation:move-clouds-back 200s linear infinite;
 
   .mainImageContainer{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    width: 95%;
   }
 
   .searchSection{
@@ -384,6 +390,8 @@ animation:move-clouds-back 200s linear infinite;
 
   .mainTitleAndDescription{
     width: 700px;
+    font-size: 18px;
+    line-height: 60px;
   }
 
   h1 {
