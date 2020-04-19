@@ -34,7 +34,7 @@ window.onload = function () {
     } else {
       const mainImg = document.createElement("iframe");
       mainImg.setAttribute('src', imageOfTheDayUrl);
-      mainImg.className = "mainImg";
+      mainImg.className = "mainVideo";
       mainImageDiv.append(mainImg);
     }
 

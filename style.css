@@ -144,6 +144,16 @@ h1 a:hover{
   max-width: 100%;
 }
 
+.mainVideo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 315px;
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .mainTitleAndDescription{
   flex-grow: 1;
   font-family:'lato',sans-serif;
@@ -372,6 +382,11 @@ animation:move-clouds-back 200s linear infinite;
     width: 95%;
   }
 
+  .mainVideo {
+    width: 100%;
+    min-height: 515px;
+  }
+
   .searchSection{
     flex-direction: column;
   }
@@ -394,6 +409,11 @@ animation:move-clouds-back 200s linear infinite;
     width: 700px;
     font-size: 18px;
     line-height: 60px;
+  }
+
+  .mainVideo {
+    width: 100%;
+    min-height: 515px;
   }
 
   h1 {
