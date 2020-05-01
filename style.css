@@ -127,6 +127,7 @@ h1 a:hover{
 
 .mainImageContainer{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: stretch;
   margin: 0 auto;
