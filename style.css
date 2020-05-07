@@ -8,6 +8,12 @@ body {
   z-index: auto;
   box-sizing: border-box;
   overflow-x: hidden;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
 }
 
 /* Search Section  */
@@ -143,6 +149,7 @@ h1 a:hover{
 .mainImg{
   margin: 0 auto;
   max-width: 100%;
+  animation: fadein 2s;
 }
 
 .mainVideo {
@@ -153,6 +160,7 @@ h1 a:hover{
   border: none;
   margin: 0 auto;
   padding: 0;
+  animation: fadein 2s;
 }
 
 .mainTitleAndDescription{
@@ -167,6 +175,7 @@ h1 a:hover{
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
+  animation: fadein 2s;
 }
 
 h3 {
