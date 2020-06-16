@@ -42,7 +42,7 @@ window.onload = function () {
     const mainTitle = document.createElement("div");
     mainTitle.className = "mainTitleAndDescription";
     mainTitle.innerHTML =
-      `<h3>Astronomy Picture of the Day</h3>
+      `<h3>Astronomy Media of the Day</h3>
         <p> ${imageOfTheDayTitle}, ${imageOfTheDayYear}.</p> 
         <p>${imageOfTheDayDescription}</p>`;
 
@@ -123,12 +123,12 @@ window.onload = function () {
         divContainer.append(divImgAndTitle);
         mainSection.appendChild(divContainer);
 
-      } // Closing the if statement
+      } 
 
-    } // Closing the for loop
+    } 
 
 
-  } // Closing renderResults Function 
+  } 
 
-} // Closing windows.onload function 
+} 
 

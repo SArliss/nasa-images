@@ -27,32 +27,32 @@ body {
 }
 
 #mainButton {
-padding:0.35em 1.2em;
+padding:0.5em 1.2em;
 margin:0 0.3em 0.3em 0;
-border-radius:0.12em;
 box-sizing: border-box;
 text-decoration:none;
 font-family: 'lato',sans-serif;
 font-weight:500;
 width: 200px;
 color: rgb(190, 190, 190);
-border: 0.1em solid rgba(100, 100, 100, 0.3);
+border: 1px solid rgba(39, 7, 7, 0.2);
+border-radius: 10px;
 background-color: rgba(100, 100, 100, .6);
 text-align:center;
 font-size: 16px;
 }
 
 #mainInput {
-padding:0.35em 1.2em;
+padding:0.5em 1.2em;
 margin:0 0.3em 0.3em 0;
-border-radius:0.12em;
 box-sizing: border-box;
 text-decoration:none;
 font-family: 'lato',sans-serif;
 font-weight:500;
 width: 200px;
 color: rgb(16, 16, 16);
-border: 0.1em solid rgba(255, 255, 255, .4);
+border: 1px solid rgba(39, 7, 7, 0.2);
+border-radius: 10px;
 background-color: rgba(255, 255, 255, .4);
 text-align:center;
 font-size: 16px;
@@ -73,10 +73,10 @@ nav{
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  background-color: rgba(46, 49, 49, .8);
+  background-color: rgba(28, 27, 27, 0.8);
   font-family:'lato',sans-serif;
   color: rgb(255, 255, 255);
-  box-shadow: 1px 1px 1px rgba(133, 133, 133, 0.8);
+  box-shadow: 1px 1px 1px rgba(45, 45, 45, 0.5);
 }
 
 nav a{
@@ -149,6 +149,8 @@ h1 a:hover{
 .mainImg{
   margin: 0 auto;
   max-width: 100%;
+  border: 1px solid rgba(39, 7, 7, 0.2);
+  border-radius: 10px;
   animation: fadein 2s;
 }
 
@@ -157,7 +159,8 @@ h1 a:hover{
   justify-content: center;
   width: 100%;
   min-height: 315px;
-  border: none;
+  border: 1px solid rgba(39, 7, 7, 0.2);
+  border-radius: 10px;
   margin: 0 auto;
   padding: 0;
   animation: fadein 2s;
@@ -175,6 +178,8 @@ h1 a:hover{
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
+  border: 1px solid rgba(39, 7, 7, 0.2);
+  border-radius: 10px;
   animation: fadein 2s;
 }
 
